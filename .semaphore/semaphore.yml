@@ -18,14 +18,6 @@ blocks:
         commands:
           - checkout
           - echo $APP_ENV
-          - ls -1
-          - echo "$AWS_ACCESS_KEY_ID"
-          - echo "$AWS_SECRET_ACCESS_KEY"
-          - npm i -g npm
-          - node -v
-          - npm -v
-          - npm install build
-          - npm run build
-          - aws s3 sync ./build s3://salaoperto.com.br --acl public-read --delete
+          - aws s3 sync . s3://salaoperto-landing --acl public-read --delete
           - aws cloudfront create-invalidation --distribution-id E1CHJVQLYZQCPQ --paths "/*"
           - echo "done"
