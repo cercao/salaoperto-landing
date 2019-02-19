@@ -18,8 +18,6 @@ blocks:
         commands:
           - checkout
           - echo $APP_ENV
-          - aws s3 sync ./css s3://salaoperto-landing/css --acl public-read --delete --cache-control max-age=604800
-          - aws s3 sync ./img s3://salaoperto-landing/img --acl public-read --delete --cache-control max-age=604800
-          - aws s3 sync . s3://salaoperto-landing/index.html --acl public-read --delete --exclude 'img/*'  --exclude 'css/*'
+          - aws s3 sync . s3://salaoperto-landing --acl public-read --delete --cache-control max-age=604800
           - aws cloudfront create-invalidation --distribution-id E1CHJVQLYZQCPQ --paths "/*"
           - echo "done"
