@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://www.salaoperto.com.br/">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="amp-google-client-id-api" content="googleanalytics">
-  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+
   <script async="" src="https://cdn.ampproject.org/v0.js"></script>
 
 
@@ -77,19 +77,28 @@
   <header class="travel-header absolute top-0 right-0 left-0">
     <div class="px1 md-px2 py1 md-py2 flex justify-between items-center">
       <a href="travel.amp" class="travel-icon-logo mx-auto inline-block circle">
-        <img decoding="async" src="/img/logo.webp" class=""></amp-img>        </a>
+        
+        <picture>
+          <source srcset="/img/logo.webp" type="image/webp">
+          <source srcset="/img/logo.png" type="image/png"> 
+          <img src="/img/logo.png" alt="Salão perto">
+        </picture>   
+      </a>
     </div>
   </header>
 </section>
 
-
 <!-- Hero -->
 <div class="travel-hero-bg absolute col-12">
-
-    
-    <amp-img class="travel-hero-bg-img absolute" src="/img/salao-12.webp" height="80vmax" noloading=""></amp-img>
-    <amp-img class="travel-hero-bg-img absolute" src="/img/salao-16.webp" height="80vmax" noloading=""></amp-img>
-    <amp-img class="travel-hero-bg-img absolute" src="/img/salao-7.webp" height="80vmax" noloading=""></amp-img>
+  <amp-img src="/img/salao-12.webp" class="travel-hero-bg-img absolute" height="80vmax" noloading="">
+    <amp-img fallback src="/img/salao-12.png" class="travel-hero-bg-img absolute" height="80vmax" noloading=""></amp-img>
+  </amp-img>
+  <amp-img src="/img/salao-16.webp" class="travel-hero-bg-img absolute" height="80vmax" noloading="">
+    <amp-img fallback src="/img/salao-16.png" class="travel-hero-bg-img absolute" height="80vmax" noloading=""></amp-img>
+  </amp-img>
+  <amp-img src="/img/salao-7.webp" class="travel-hero-bg-img absolute" height="80vmax" noloading="">
+    <amp-img fallback src="/img/salao-7.png" class="travel-hero-bg-img absolute" height="80vmax" noloading=""></amp-img>
+  </amp-img>
 </div>
 
 <section class="travel-hero relative">
